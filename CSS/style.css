@@ -1,0 +1,102 @@
+.container-fluid {
+    background-color: #71a37c;
+    padding: 40px;
+    text-align: unset;
+    font-size: x-large;
+    color: black;
+  }
+  .container {
+    display: flex;
+  }
+  
+  .logo {
+    margin-right: 10px;
+    width: 75px; /* Adjust the width and height as needed */
+    height: 75px; /* Adjust the width and height as needed */
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden; /* Ensures the image stays within the circular container */
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.container{
+  display: flex;
+}
+.flag{
+  margin-left: 100%;
+  width: 20%;
+  height: 15%;
+}
+.flag img {
+  width: 100%;
+  height: 100;
+  object-fit: fill;
+}
+/* CSS for search button*/
+/* Style for the search container */
+#searchContainer {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Vertically center the items */
+  position: fixed;
+  top: 20px;
+  right:  10px;
+}
+
+/* Style for the search box */
+#searchBox {
+  flex: 1; /* Grow to fill available space */
+  padding: 1% 1%; /* Add some padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
+
+/* Style for the search button */
+#searchButton {
+  background-color: #007BFF; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 0.5% 0.50%; /* Add some padding to the button */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px;
+  cursor: pointer;
+  cursor: default;
+  margin-left: 10px; /* Add some space between the search box and button */
+  position: fixed;
+  top: 25px;
+  right: 0.1px;
+}
+/* this is the css for dropdown button */
+.btn-group:hover .dropdown-menu {
+  display: block;
+}
+ /* Style for the dropdown button */
+ .btn-primary.dropdown-toggle {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+}
+/* Style for the dropdown menu items */
+.dropdown-menu a {
+  color: #333;
+}
+/* Hover effect for dropdown items */
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-group:hover{
+  .custiom-spacing .btn:first-child{
+    margin-right: 10px;
+  }
+}
