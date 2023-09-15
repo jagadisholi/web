@@ -33,7 +33,7 @@
 .flag img {
   width: 100%;
   height: 100;
-  object-fit: fill;
+  object-fit: fill; 
 }
 /* CSS for search button*/
 /* Style for the search container */
@@ -99,4 +99,9 @@
   .custiom-spacing .btn:first-child{
     margin-right: 10px;
   }
+}
+/*page alighment for all*/
+.page-alignment{
+  max-width: 1300px;
+  margin-inline: auto;
 }

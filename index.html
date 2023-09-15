@@ -15,27 +15,26 @@
   <script src="main.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid page-alignment">
         <div class="container">
             <div class="logo">
                 <img src="image.jpg" alt="logo">
             </div>
                 <h1><b>Bright Future Prabhidik Sikshalaya</h1>
-            <div class="container">
-                
-                 <h3 id="cureent time"> 12:00:00</h3><br>
+            <div class="container page-alignment">
             </div>
-        <div class="container">
-            <h3 id="cureent date">Saturday, 11 september 2023</h3>
+                <p id="currentTime"></p>
+                <p id="currentDate"></p>
+            </div>
         </div>
-        <div class="flag">
+        <div class="flag page-alignment">
             <img src="flag-nepal.gif" alt="falg">
         </div>
     </div>
     <input type="text" id="searchBox" placeholder="Search...">
     <button id="searchButton" onclick="searchPage()">Search</button>
     </div>
-    <div class="container mt-3">
+    <div class="container mt-3 page-alignment">
     <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
     <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
         <!-- Hover Dropdown Button -->
@@ -51,41 +50,39 @@
         </div>
     </div>
     <script>
-        let time = document.getElementById("cureent time");
-         setInterval(() =>{
-            let d = new Date();
-            time.innerHTML = d.toLocaleDateString();
-         },1000) 
-         let date = document.getElementById("current date");
-         function formatDate(date)
-{
-    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
-    const MONTHS =["Janawary", "Febrawary", "March", "April","May","June", "July","August","September","October", "November","Decomber"]
-
-    return`${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullDate}`;
-}
- // JavaScript code to display the current date
-   /* const currentDateElement = document.getElementById("currentDate");
-        const currentDate = new Date();
-        currentDateElement.textContent = currentDate.toDateString();
-        */ 
-        function updateCurrentDate() {
-            const currentDateElement = document.getElementById("currentDate");
-            const currentDate = new Date();
-            currentDateElement.textContent = currentDate.toDateString();
+        // Function to update the current time
+        function updateCurrentTime() {
+            const timeElement = document.getElementById("currentTime");
+            const now = new Date();
+            timeElement.innerHTML = now.toLocaleTimeString();
         }
 
-        // Initial call to update the date when the page loads
-        updateCurrentDate();
+        // Function to update the current date
+        function updateCurrentDate() {
+            const dateElement = document.getElementById("currentDate");
+            const now = new Date();
+            const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const dayOfWeek = DAYS[now.getDay()];
+            const month = MONTHS[now.getMonth()];
 
-        // Update the date every second (adjust the interval as needed)
-        setInterval(updateCurrentDate, 1000); // Updates every second
+            const formattedDate = `${dayOfWeek}, ${month} ${now.getDate()}, ${now.getFullYear()}`;
+            dateElement.innerHTML = formattedDate;
+        }
 
+        // Initial calls to update the date and time when the page loads
+      <!--  updateCurrentDate();
+        updateCurrentTime();
+
+        // Update the date and time every second
+        setInterval(updateCurrentDate, 1000); // Updates date every second
+        setInterval(updateCurrentTime, 1000); // Updates time every second
     </script>
     <!-- js jquery
     <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
     <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- chat bot-->
     <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js" chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
 </body>
     <!-- Content -->
@@ -98,4 +95,4 @@
         <h2>Search Results:</h2>
         <ul id="resultsList"></ul>
     </div>
-</html>     
+</html>

@@ -1,13 +1,4 @@
-/*const dateElement = document.querySelector(".date");
 
-function formatDate(date)
-{
-    const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
-    const MONTHS =["Janawary", "Febrawary", "March", "April","May","June", "July","August","September","October", "November","Decomber"]
-
-    return`${DAYS[date.getDay()]}, ${MONTHS[date.getMonth()]} ${date.getDate()} ${date.getFullDate}`;
-}
-*/
 function searchPage() {
     const searchQuery = document.getElementById("searchBox").value.toLowerCase();
     const content = document.getElementById("content").textContent.toLowerCase();
