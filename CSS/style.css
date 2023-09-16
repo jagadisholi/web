@@ -105,3 +105,15 @@
   max-width: 1300px;
   margin-inline: auto;
 }
+*{
+  font-family: sans-serif;
+}
+h3{
+  text-align: left;
+}
+img{
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+  transition: 0.3s;
+}

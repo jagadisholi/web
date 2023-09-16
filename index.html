@@ -15,30 +15,31 @@
   <script src="main.js"></script>
 </head>
 <body>
-    <div class="container-fluid page-alignment">
+    <div class="container-fluid ">
         <div class="container">
             <div class="logo">
                 <img src="image.jpg" alt="logo">
             </div>
                 <h1><b>Bright Future Prabhidik Sikshalaya</h1>
-            <div class="container page-alignment">
+            <div class="container">
             </div>
                 <p id="currentTime"></p>
                 <p id="currentDate"></p>
             </div>
         </div>
-        <div class="flag page-alignment">
+        <div class="flag">
             <img src="flag-nepal.gif" alt="falg">
         </div>
     </div>
     <input type="text" id="searchBox" placeholder="Search...">
     <button id="searchButton" onclick="searchPage()">Search</button>
     </div>
-    <div class="container mt-3 page-alignment">
-    <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
-    <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
-        <!-- Hover Dropdown Button -->
-        <div class="btn-group">
+        <div class="container mt-3">
+             <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
+             <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
+            <a href="#" class="btn btn-primary rounded-pill">Gallery</a>
+             <!-- Hover Dropdown Button -->
+            <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Download
             </button>
@@ -47,8 +48,21 @@
                 <a class="dropdown-item" href="#">Diploma Book</a>
                 <a class="dropdown-item" href="#">Japaneese Book</a>
             </div>
+            <h1>Images Refreshing Every 1 Minute</h1>
+            <img id="refreshingImage" src="" alt="Refreshed Image">
         </div>
     </div>
+    <h2>show images</h2>
+    <img src="" id="image">
+        <!-- Content -->
+        <div id="content">
+            <a href="index.html" home></a>
+        </div>
+        <!-- Search Results -->
+        <div id="searchResults">
+            <h2>Search Results:</h2>
+            <ul id="resultsList"></ul>
+        </div>
     <script>
         // Function to update the current time
         function updateCurrentTime() {
@@ -56,27 +70,68 @@
             const now = new Date();
             timeElement.innerHTML = now.toLocaleTimeString();
         }
-
         // Function to update the current date
         function updateCurrentDate() {
             const dateElement = document.getElementById("currentDate");
             const now = new Date();
             const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const MONTHS = ["Janawary", "Febwary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             const dayOfWeek = DAYS[now.getDay()];
             const month = MONTHS[now.getMonth()];
-
             const formattedDate = `${dayOfWeek}, ${month} ${now.getDate()}, ${now.getFullYear()}`;
             dateElement.innerHTML = formattedDate;
         }
-
         // Initial calls to update the date and time when the page loads
       <!--  updateCurrentDate();
         updateCurrentTime();
-
         // Update the date and time every second
         setInterval(updateCurrentDate, 1000); // Updates date every second
         setInterval(updateCurrentTime, 1000); // Updates time every second
+    </script>
+     <!--<script>
+        // Array of image URLs
+        const imageUrls = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg",
+            // Add more image URLs here
+        ];
+
+        let currentIndex = 0; // Current image index
+
+        // Function to refresh the image source every 1 minute (60000 milliseconds)
+        function refreshImage() {
+            const imageElement = document.getElementById("refreshingImage");
+            const currentSrc = imageElement.getAttribute("src");
+
+            // Calculate the next image index
+            currentIndex = (currentIndex + 1) % imageUrls.length;
+
+            // Get the URL of the next image
+            const nextImageUrl = imageUrls[currentIndex];
+
+            // Add a random query parameter to force a refresh
+            const randomParam = Math.random();
+            const newSrc = `${nextImageUrl}?v=${randomParam}`;
+
+            // Update the image source
+            imageElement.setAttribute("src", newSrc);
+        }
+
+        // Initial call to refresh the image when the page loads
+        refreshImage();
+
+        // Refresh the image every 1 minute (adjust the interval as needed)
+        setInterval(refreshImage, 60000); // Refresh every 1 minute
+    </script>
+-->
+    <script type="text/javascript">
+        let image = document.getElementById('image');
+        let images = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']
+        setInterval(function() {
+            let random =Math.floor(Math.random()* 6);
+            image.src = image[random];
+        }, 800);
     </script>
     <!-- js jquery
     <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
@@ -85,14 +140,4 @@
     <!-- chat bot-->
     <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js" chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
 </body>
-    <!-- Content -->
-    <div id="content">
-        <a href="index.html" home></a>
-    </div>
-
-    <!-- Search Results -->
-    <div id="searchResults">
-        <h2>Search Results:</h2>
-        <ul id="resultsList"></ul>
-    </div>
 </html>
