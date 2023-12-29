@@ -30,10 +30,13 @@
   width: 20%;
   height: 15%;
 }
+/*make the flag in the center */
 .flag img {
   width: 100%;
   height: 100;
   object-fit: fill; 
+  margin-right: 10%;
+  margin-right: 20px;
 }
 /* CSS for search button*/
 /* Style for the search container */
@@ -117,6 +120,7 @@ img{
   margin: 0 auto;
   transition: 0.3s;
 }
+/* style for footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
@@ -146,7 +150,7 @@ footer{
 }
 
      .footer-content p{
-    max-width: 100%
+    max-width: 100%;
     color: white;
     opacity: 0.7;
     margin: 10px 0;
@@ -181,4 +185,34 @@ footer{
     opacity: 0.7;
     font-weight: 400;
     text-transform: uppercase;
+}
+#scroll-text {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#typed-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
 }

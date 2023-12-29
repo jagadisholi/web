@@ -22,11 +22,9 @@
             </div>
                 <h1><b>Bright Future Prabhidik Sikshalaya</h1>
             <div class="container">
-            </div>
                 <p id="currentTime"></p>
                 <p id="currentDate"></p>
             </div>
-        </div>
         <div class="flag">
             <img src="flag-nepal.gif" alt="falg">
         </div>
@@ -38,43 +36,48 @@
              <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
              <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
             <a href="#" class="btn btn-primary rounded-pill">Gallery</a>
+            <a href="#" class="btn btn-primary rounded-pill">Academic Program</a>
              <!-- Hover Dropdown Button -->
             <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Download
-            </button>
-            <div class="dropdown-menu">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Download
+                </button>
+                <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Basic Book</a>
                 <a class="dropdown-item" href="#">Diploma Book</a>
                 <a class="dropdown-item" href="#">Japaneese Book</a>
+                </div>
             </div>
-            <h1>Images Refreshing Every 1 Minute</h1>
-            <img id="refreshingImage" src="" alt="Refreshed Image">
-        </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Program Conducted 
+                </button>  
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Computer Basic</a>
+                <a class="dropdown-item" href="#">Computer Diploma</a>
+                <a class="dropdown-item" href="#">Accounting Package</a>
+                <a class="dropdown-item" href="#">Japaneese language</a>
+                <a class="dropdown-item" href="#">English Class</a>
+                <a class="dropdown-item" href="#">Computer Hardware Reparing Class</a>
+                </div>
+            </div>
     </div>
-    <h2>show images</h2>
-    <img src="" id="image">
-        <!-- Content -->
+           <!-- Content -->
         <div id="content">
             <a href="index.html" home></a>
         </div>
-        <!-- Search Results -->
-        <div id="searchResults">
-            <h2>Search Results:</h2>
-            <ul id="resultsList"></ul>
-        </div>
-    <script>
-        // Function to update the current time
-        function updateCurrentTime() {
-            const timeElement = document.getElementById("currentTime");
-            const now = new Date();
-            timeElement.innerHTML = now.toLocaleTimeString();
-        }
-        // Function to update the current date
-        function updateCurrentDate() {
-            const dateElement = document.getElementById("currentDate");
-            const now = new Date();
-            const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        <script>
+            // Function to update the current time
+            function updateCurrentTime() {
+                const timeElement = document.getElementById("currentTime");
+                const now = new Date();
+                timeElement.innerHTML = now.toLocaleTimeString();
+            }
+            // Function to update the current date
+            function updateCurrentDate() {
+                const dateElement = document.getElementById("currentDate");
+                const now = new Date();
+                const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const MONTHS = ["Janawary", "Febwary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             const dayOfWeek = DAYS[now.getDay()];
             const month = MONTHS[now.getMonth()];
@@ -88,41 +91,7 @@
         setInterval(updateCurrentDate, 1000); // Updates date every second
         setInterval(updateCurrentTime, 1000); // Updates time every second
     </script>
-     <script>
-        // Array of image URLs
-        const imageUrls = [
-            "1.jpg",
-            "2.jpg",
-            "3.jpg",
-            // Add more image URLs here
-        ];
-
-        let currentIndex = 0; // Current image index
-
-        // Function to refresh the image source every 1 minute (60000 milliseconds)
-        function refreshImage() {
-            const imageElement = document.getElementById("refreshingImage");
-            const currentSrc = imageElement.getAttribute("src");
-
-            // Calculate the next image index
-            currentIndex = (currentIndex + 1) % imageUrls.length;
-
-            // Get the URL of the next image
-            const nextImageUrl = imageUrls[currentIndex];
-
-            // Add a random query parameter to force a refresh
-            const randomParam = Math.random();
-            const newSrc = `${nextImageUrl}?v=${randomParam}`;
-
-            // Update the image source
-            imageElement.setAttribute("src", newSrc);
-        }
-
-        // Initial call to refresh the image when the page loads
-        refreshImage();
-
-        // Refresh the image every 1 minute (adjust the interval as needed)
-        setInterval(refreshImage, 60000); // Refresh every 1 minute
+    <!--
         <style>
         .header{
             height: 700px;
@@ -132,60 +101,131 @@
             background-position: center;
             background-size: cover;
         }
-     .header h1{
-                       font-size:40px;
-                       font-weight:700;
-                       margin-top:235px}
-
-       
-          </style>
-          <body>
- <div class="header">
+        .header h1{
+            font-size:40px;
+            font-weight:700;
+            margin-top:235px}
+            
+            
+        </style>
+        <body>
+            <div class="header">
 <div class="container">
 <div class="row text center">
 <div class="col-lg-12">
-
-<h1>Design That Matters</h1>
-
-</div>
-</div>
-</div>
-</div>
-    </script>
-
-    <script type="text/javascript">
-        let image = document.getElementById('image');
-        let images = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']
-        setInterval(function() {
-            let random =Math.floor(Math.random()* 6);
-            image.src = image[random];
-        }, 800);
-    </script>
-    <!-- js jquery
-    <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
-    <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script><!-- js--> 
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- chat bot-->
-    <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js" chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
-    <div class="container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8373766139557!2d82.48351420621461!3d28.029445854967687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399795e66723ae95%3A0xc4d44483519e171f!2zQnJpZ2h0IEZ1dHVyZSBQcmFiaWRoaWsgU2hpa3NoYWxheWEg4KSs4KWN4KSw4KS-4KSH4KSfIOCkq-CljeCkr-ClgeCkmuCksCDgpKrgpY3gpLDgpL7gpKzgpL_gpKfgpL_gpJUg4KS24KS_4KSV4KWN4KS34KS-4KSy4KSv!5e0!3m2!1sen!2snp!4v1695752443543!5m2!1sen!2snp" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
-    <footer>
-        <div class="footer-content">
-        <nav> <b>contacts</b></nav>
-            <div class="socialIcons">
+    <h1>Design That Matters</h1>
+    
+</div>
+</div>
+</div>
+</div>
+-->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/nepali-date-converter@2.0.1/dist/nepali-date-converter.min.js"></script>
+
+// Get the current Gregorian date
+const currentDate = new Date();
+
+// Convert the Gregorian date to Nepali date
+const nepaliDate = NepaliDateFunctions.ad2bs(currentDate.getFullYear(), currentDate.getMonth() + 1, currentDate.getDate());
+
+// Format and display the Nepali date
+const formattedNepaliDate = nepaliDate.year + "-" + nepaliDate.month + "-" + nepaliDate.day;
+
+// Get the current time
+const currentTime = currentDate.toLocaleTimeString();
+
+// Display the Nepali date and time
+console.log("Nepali Date: " + formattedNepaliDate);
+console.log("Current Time: " + currentTime);
+-->
+<img id="image" src="" alt="Random Image">
+
+<script type="text/javascript">
+    let image = document.getElementById('image');
+    let images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
+    setInterval(function() {
+            let random = Math.floor(Math.random() * 6);
+            image.src = images[random];
+        }, 1800);
+        </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">BFPC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Consultancy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="container mt-5">
+        <h1>Welcome to BFPC</h1>
+        <p>BFPC is your destination for quality education and expert consultancy services. Whether you are looking to learn new skills or need professional advice, we've got you covered.</p>
+    </div>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 bg-primary">
+                    <h1 class="text-light">Half of the Page</h1>
+                    <p class="text-light">This is the left half of the page.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="container p-5">
+                        <h2 id="scroll-text">Lorem Ipsum</h2>
+                        <p id="scroll-text">
+                            <span id="typed-text"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+        <!-- Search Results -->
+        <div id="searchResults">
+            <h2>Search Results:</h2>
+            <ul id="resultsList"></ul>
+        </div>
+        <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
+        <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script><!-- js--> 
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- chat bot-->
+        <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js" chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8373766139557!2d82.48351420621461!3d28.029445854967687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399795e66723ae95%3A0xc4d44483519e171f!2zQnJpZ2h0IEZ1dHVyZSBQcmFiaWRoaWsgU2hpa3NoYWxheWEg4KSs4KWN4KSw4KS-4KSH4KSfIOCkq-CljeCkr-ClgeCkmuCksCDgpKrgpY3gpLDgpL7gpKzgpL_gpKfgpL_gpJUg4KS24KS_4KSV4KWN4KS34KS-4KSy4KSv!5e0!3m2!1sen!2snp!4v1695752443543!5m2!1sen!2snp" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <footer>
+                <div class="footer-content">
+                    <nav> <b>contacts</b></nav>
+                    <div class="socialIcons">
                 <a href="https://www.facebook.com/profile.php?id=100079189781645"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCCfaLuXvJQFIJsUwhOE8M0g%3Ffbclid%3DIwAR2PLlk4YqPVnXwL9tNyiyIbhe_DE-CWwBxmSqqkwPPmBtqk4I-p5ow2VrQ&h=AT3UZcaMjPYkKhQsSvCLXyiXrMCHXzDIqYFXf7m2-nZeAlvkUeUe3F1Irovun7ogDJf0_nzL3lwW2r5klGCUUYNZtJjFapb5BKK3A9SZRRDtB56XsI-DngIGsKYdCW_kesYNen19lRU4MTnPfHhCqA"><i class="fa-brands fa-youtube"></i></a>
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            
-            <p> this is a paragraph</p>
-                
-           </div>
-     </div>
+                <a href="#"><i class="instagram.com"></i></a>    
+            </div>
+        </div>
      <div class="footer-bottom">
-        <p> copyright &copy;2023kamal.designed by <span class="designer">kamal</span> </p>
+         <p> copyright &copy;2023kamal.designed by <span class="designer">kamal</span> </p>
 
      </div>
     </footer>

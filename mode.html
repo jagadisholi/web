@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bfps</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="CSS/model.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="logo text-center">
+                <img class="img-fluid" src="image.jpg" alt="logo">
+            </div>
+            <h1 class="text-center"><b>Bright Future Prabhidik Sikshalaya</b></h1>
+            <div class="container text-center">
+                <p id="currentTime"></p>
+                <p id="currentDate"></p>
+            </div>
+            <div class="flag text-center">
+                <img class="img-fluid" src="flag-nepal.gif" alt="flag">
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <input type="text" id="searchBox" placeholder="Search...">
+            <button class="btn btn-primary" id="searchButton" onclick="searchPage()">Search</button>
+        </div>
+        <div class="container mt-3">
+            <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
+            <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
+            <a href="#" class="btn btn-primary rounded-pill">Gallery</a>
+            <a href="#" class="btn btn-primary rounded-pill">Academic Program</a>
+            <!-- Hover Dropdown Button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Download
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Basic Book</a>
+                    <a class="dropdown-item" href="#">Diploma Book</a>
+                    <a class="dropdown-item" href="#">Japanese Book</a>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Program Conducted
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Computer Basic</a>
+                    <a class="dropdown-item" href="#">Computer Diploma</a>
+                    <a class="dropdown-item" href="#">Accounting Package</a>
+                    <a class="dropdown-item" href="#">Japanese language</a>
+                    <a class="dropdown-item" href="#">English Class</a>
+                    <a class="dropdown-item" href="#">Computer Hardware Repairing Class</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content" class="container">
+            <!-- Content placeholder, adjust as needed -->
+            <a href="index.html" home></a>
+        </div>
+        <!-- JavaScript for updating time and date -->
+        <script>
+            // Function to update the current time
+            function updateCurrentTime() {
+                const timeElement = document.getElementById("currentTime");
+                const now = new Date();
+                timeElement.innerHTML = now.toLocaleTimeString();
+            }
+            // Function to update the current date
+            function updateCurrentDate() {
+                const dateElement = document.getElementById("currentDate");
+                const now = new Date();
+                const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                    "October", "November", "December"];
+                const dayOfWeek = DAYS[now.getDay()];
+                const month = MONTHS[now.getMonth()];
+                const formattedDate = `${dayOfWeek}, ${month} ${now.getDate()}, ${now.getFullYear()}`;
+                dateElement.innerHTML = formattedDate;
+            }
+            // Initial calls to update the date and time when the page loads
+            updateCurrentDate();
+            updateCurrentTime();
+            // Update the date and time every second
+            setInterval(updateCurrentDate, 1000); // Updates date every second
+            setInterval(updateCurrentTime, 1000); // Updates time every second
+        </script>
+
+        <!-- Responsive Image Carousel -->
+        <div id="imageCarousel" class="container mt-3 text-center">
+            <img id="image" class="img-fluid" src="" alt="Random Image">
+            <script type="text/javascript">
+                let image = document.getElementById('image');
+                let images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
+                setInterval(function () {
+                    let random = Math.floor(Math.random() * 6);
+                    image.src = images[random];
+                }, 1800);
+            </script>
+        </div>
+
+        <!-- Responsive Footer -->
+        <footer class="container-fluid">
+            <div class="footer-content text-center">
+                <nav><b>Contacts</b></nav>
+                <div class="socialIcons">
+                    <a href="https://www.facebook.com/profile.php?id=100079189781645"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCCfaLuXvJQFIJsUwhOE8M0g%3Ffbclid%3DIwAR2PLlk4YqPVnXwL9tNyiyIbhe_DE-CWwBxmSqqkwPPmBtqk4I-p5ow2VrQ&h=AT3UZcaMjPYkKhQsSvCLXyiXrMCHXzDIqYFXf7m2-nZeAlvkUeUe3F1Irovun7ogDJf0_nzL3lwW2r5klGCUUYNZtJjFapb5BKK3A9SZRRDtB56XsI-DngIGsKYdCW_kesYNen19lRU4MTnPfHhCqA"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <!-- Add links for TikTok, Twitter, and Instagram -->
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>Copyright &copy; 2023 kamal. Designed by <span class="designer">kamal</span></p>
+            </div>
+        </footer>
+    </div>
+
+     <!-- Bootstrap and other scripts -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+     <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
+     <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+ 
+     <!-- Chatbot script -->
+     <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js"
+         chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
+ 
+     <!-- Google Maps iframe -->
+     <div class="container">
+         <iframe
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8373766139557!2d82.48351420621461!3d28.029445854967687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399795e66723ae95%3A0xc4d44483519e171f!2zQnJpZ2h0IEZ1dHVyZSBQcmFiaWRoaWsgU2hpa3NoYWxheWEg4KSs4KWN4KSw4KS-4KSH4KSfIOCkq-CljeCkr-ClgeCkmuCksCDgpKrgpY3gpLDgpL7gpKzgpL_gpKfgpL_gpJUg4KS24KS_4KSV4KWN4KS34KS-4KSy4KSv!5e0!3m2!1sen!2snp!4v1695752443543!5m2!1sen!2snp"
+             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
+ </body>
+ 
+ </html>

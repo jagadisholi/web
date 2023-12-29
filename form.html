@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form.</title>
+</head>
+<body>
+    <h2>Fill your information:</h2>
+    <form action="backend.php"></form>
+    <div>
+        Gender: Male<input type="radio" name="myGender">Female<input type="radio" name="myGender">Other<input
+        type="radio" name="myGender">
+    </div>
+    <div><br>
+        <label for="date">Date of birth:</label>
+        <input type="date" name="myDate of birth" id="date">
+    </div><br>
+    <label for="name">Name:</label>
+    <input type="text" name="myName" id="name">
+    </div><br><br>
+    <div>
+        <label for="class">Class:</label>
+        <input type="text" class="myClass" id="class">
+    </div><br>
+    <div>
+        <label for="adress">Adress:</label>
+        <input type="text" name="myAdress" id="adress">
+    </div><br>
+    <div>
+        <label for="Contact">Contact no:</label>
+        <input type="text" name="myContact" id="Contact">
+    </div><br>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="myEmail" id="email">
+        <div><br>
+            <label for="father">Father's name:</label>
+            <input type="text" name="myFather" id="father">
+        </div><br>
+        <div>
+            <label for="mother">Mother's name:</label>
+            <input type="text" name="myMother" id="mother">
+        </div><br>
+        <div>
+            <label for="grandfather">Grandfather's name:</label>
+            <input type="text" name="myGrandfather" id="grandfather">
+        </div><br>
+        <div>
+            <label for="classtime">Class Time:</label>
+            <select name="myClasstime" id="classtime">
+                <option value="Morning">5:30-7:00AM</option>
+                <option value="Morning"selected>7:00-8:00AM</option>
+                <option value="Morning">8:00-9:00AM</option>
+                <option value="Morning">9:00-10:00AM</option>
+                <option value="Morning">10:00-11:00AM</option>
+                <option value="Morning">11:00-12:00PM</option>
+                <option value="Morning">12:00-1:00PM</option>
+                <option value="Morning">1:00-2:00PM</option>
+                <option value="Morning">2:00-3:AMPM</option>
+                <option value="Morning">3:00-4:00PM</option>
+                <option value="Morning">4:00-5:00PM</option>
+                <option value="Morning">5:00-6:00PM</option>
+                <option value="Morning">6:00-7:00PM</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="status">What are you currently doing?</label>
+            <select name="myStatus" id="status">
+                <option value="Student">Student</option>
+                <option value="Job Holder">Job Holder</option>
+                <option value="Other">Other</option>
+            </select>
+        </div><br>
+            <div>
+                <label for="textarea"> Write about yourself:</label>
+                <br><textarea name="myText" cols="90" rows="10" id="textarea"></textarea>
+            </div><br>
+        </div>
+        <input type="submit" value="Click Here To Submit">
+        <input type="reset" value="Reset now">
+    </div><br>
+</body>
+</html>

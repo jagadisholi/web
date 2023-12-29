@@ -75,3 +75,29 @@ refreshImage();
 // Refresh the image every 1 minute (adjust the interval as needed)
 setInterval(refreshImage, 60000); // Refresh every 1 minute
 
+const scrollText = document.querySelectorAll("#scroll-text");
+const typedText = document.getElementById("typed-text");
+
+window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    scrollText.forEach((element) => {
+        if (scrollPosition > element.offsetTop - windowHeight) {
+            element.style.opacity = 1;
+        }
+    });
+});
+
+const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Quisque id odio. Praesent libero. Integer nec odio. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.";
+
+let index = 0;
+function type() {
+    if (index < text.length) {
+        typedText.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 50);
+    }
+}
+
+type();
