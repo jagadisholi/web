@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -11,74 +12,112 @@
      custom CSS-->
     <link rel="stylesheet" href="CSS/style.css">
     <!-- custom js-->
-  <!--<script src ="js/main.js"defer></script>-->
-  <script src="main.js"></script>
+    <!--<script src ="js/main.js"defer></script>-->
+    <link rel="stylesheet" type="text/css" href="css/picturestyle.css">
+    <link rel="stylesheet" type="text/css" herf="footer_bfps/footer.css">
+    <script src="main.js"></script>
 </head>
+
 <body>
+    
     <div class="container-fluid ">
         <div class="container">
             <div class="logo">
-                <img src="image.jpg" alt="logo">
+                <img src="logo.jpg" alt="logo">
             </div>
-                <h1><b>Bright Future Prabhidik Sikshalaya</h1>
+            <h1><b>Bright Future Prabhidik <br> <center>Sikshalaya</center></h1>
+                
             <div class="container">
                 <p id="currentTime"></p>
                 <p id="currentDate"></p>
             </div>
-        <div class="flag">
-            <img src="flag-nepal.gif" alt="falg">
-        </div>
-    </div>
-    <input type="text" id="searchBox" placeholder="Search...">
-    <button id="searchButton" onclick="searchPage()">Search</button>
-    </div>
-        <div class="container mt-3">
-             <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
-             <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
-            <a href="#" class="btn btn-primary rounded-pill">Gallery</a>
-            <a href="#" class="btn btn-primary rounded-pill">Academic Program</a>
-             <!-- Hover Dropdown Button -->
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Download
-                </button>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Basic Book</a>
-                <a class="dropdown-item" href="#">Diploma Book</a>
-                <a class="dropdown-item" href="#">Japaneese Book</a>
-                </div>
+            <div class="flag">
+                <img src="flag-nepal.gif" alt="falg">
             </div>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Program Conducted 
-                </button>  
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Computer Basic</a>
-                <a class="dropdown-item" href="#">Computer Diploma</a>
-                <a class="dropdown-item" href="#">Accounting Package</a>
-                <a class="dropdown-item" href="#">Japaneese language</a>
-                <a class="dropdown-item" href="#">English Class</a>
-                <a class="dropdown-item" href="#">Computer Hardware Reparing Class</a>
-                </div>
-            </div>
-    </div>
-           <!-- Content -->
-        <div id="content">
-            <a href="index.html" home></a>
         </div>
-        <script>
-            // Function to update the current time
-            function updateCurrentTime() {
-                const timeElement = document.getElementById("currentTime");
-                const now = new Date();
-                timeElement.innerHTML = now.toLocaleTimeString();
-            }
-            // Function to update the current date
-            function updateCurrentDate() {
-                const dateElement = document.getElementById("currentDate");
-                const now = new Date();
-                const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-            const MONTHS = ["Janawary", "Febwary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    <!--<input type="text" id="searchBox" placeholder="Search...">
+        <button id="searchButton" onclick="searchPage()">Search</button>-->
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">BFPC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="btn btn-primary rounded-pill mr-2">Home</a>
+                </li>
+                <a href="about.html" class="btn btn-primary rounded-pill mr-2">About</a>
+                <a href="#" class="btn btn-primary rounded-pill">Academic Program</a>
+              <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>-->
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary rounded-pill">Consultancy</a>
+        
+                </li>
+                <a href="#" class="btn btn-primary rounded-pill">Gallery</a>
+        
+                <!-- Hover Dropdown Button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Download
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Basic Book</a>
+                        <a class="dropdown-item" href="#">Diploma Book</a>
+                        <a class="dropdown-item" href="#">Japaneese Book</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Program Conducted
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Computer Basic </a>
+                        <a class="dropdown-item" href="#">Computer Diploma</a>
+                        <a class="dropdown-item" href="#">Accounting Package</a>
+                        <a class="dropdown-item" href="#">Japaneese language</a>
+                        <a class="dropdown-item" href="#">English Class</a>
+                        <a class="dropdown-item" href="#">Computer Hardware Reparing Class</a>
+                    </div>
+                </div>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>-->
+                <li class="nav-item">
+                    <a href="#" class="btn btn-primary rounded-pill">Contact</a>
+        
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        
+        
+       
+    </div>
+    <!-- Content -->
+    <div id="content">
+        <a href="index.html" home></a>
+    </div>
+    <script>
+        // Function to update the current time
+        function updateCurrentTime() {
+            const timeElement = document.getElementById("currentTime");
+            const now = new Date();
+            timeElement.innerHTML = now.toLocaleTimeString();
+        }
+        // Function to update the current date
+        function updateCurrentDate() {
+            const dateElement = document.getElementById("currentDate");
+            const now = new Date();
+            const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            const MONTHS = ["Jan", "Feb", "Mar", "Apri", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             const dayOfWeek = DAYS[now.getDay()];
             const month = MONTHS[now.getMonth()];
             const formattedDate = `${dayOfWeek}, ${month} ${now.getDate()}, ${now.getFullYear()}`;
@@ -121,7 +160,7 @@
 </div>
 </div>
 -->
-<!--
+    <!--
 <script src="https://cdn.jsdelivr.net/npm/nepali-date-converter@2.0.1/dist/nepali-date-converter.min.js"></script>
 
 // Get the current Gregorian date
@@ -140,47 +179,125 @@ const currentTime = currentDate.toLocaleTimeString();
 console.log("Nepali Date: " + formattedNepaliDate);
 console.log("Current Time: " + currentTime);
 -->
-<img id="image" src="" alt="Random Image">
+    <img id="image" src="" alt="Random Image">
 
-<script type="text/javascript">
+    <script type="text/javascript">
     let image = document.getElementById('image');
-    let images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
+    let images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg  ', '8.jpg','9.jpg', '10.jpg', '11.jpg', '12.jpg ', '13.jpg ', '14.jpg', '15.jpg', '16.jpg', '17.jpg'];
     setInterval(function() {
-            let random = Math.floor(Math.random() * 6);
+            let random = Math.floor(Math.random() * 17);
             image.src = images[random];
-        }, 1800);
-        </script>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">BFPC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Consultancy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
-    <!-- Page Content -->
-    <div class="container mt-5">
-        <h1>Welcome to BFPC</h1>
-        <p>BFPC is your destination for quality education and expert consultancy services. Whether you are looking to learn new skills or need professional advice, we've got you covered.</p>
+        }, 5000);
+    </script>
+   <div class="heading">
+    <br><br>
+    <h2> <strong><u>About Us</u> </strong></h2>
+     <p>BFPC is your destination for quality education and expert consultancy services.</p>
     </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="aboutus.jpg">
+            </div>
+            <div class="about-content">
+                <input id="ch" type="checkbox">
+                <h2><strong>Whether you are looking to learn new skills or need professional advice, we've got you covered.</strong></h2>
+                <p>Bright Future Prabidhik Shikshalaya (BFPS) is a modern educational institution in the Mid-West region of Lumbini Province. This Institute is located in Dang District Ghorahi Sub-Metropolitan City 15 Bharatpur, Nepal. It was established in the year 2021 A.D to conduct technical, practical and short term training dedicated to meet the growing need for quality practical education. BFPS sprouted in the educational field with the support of academically conscious parents and the efforts of social service oriented people with the aim of providing quality technical and practical education in the field of modern education, with the aim of providing quality technical and practical education with excellence and strict discipline has been established to provide with a team of committed and experienced trainers and dedicated teaching and non-teaching staff, the academy aims to make the institution a center of excellence by providing high quality academic services along with related academic activities.</p>
+                <div class="content">
+                    
+                    <p>
+                        In survey strategy, we emerge as the top marking institute in terms of academic excellence, placement witness, infrastructural facilities, well-managed faculty, and many more. Our total program is based on a plan that can propel the candidate to a higher level of success. We know that students face many difficulties in choosing the right career path to complete their studies and excel.
+                        Since its inception, this educational institution has been conducting computer training for free and with special discounts targeting Nepali youths who are economically disadvantaged, poor, Dalit, helpless, disabled and marginalized. Shikshalaya has also been conducting short term trainings in various livelihoods targeting marginalized communities and needy people.
+                    </p>
+                    <label for="ch">Show less</label>
+                </div>
+                <label for="ch">Read more...</label>
+                 
+            </div> 
+        </section>
+    </div>
+   </div><br><br>
+
+
+
+
+    <div>
+        <ul type="square">
+            <li>Objective of BFPS</li>
+            <ol type="1">
+                <li>To focus on career along with studies, teach and guide students in the right way to succeed in life.</li>
+                <li>To provide complete study planning skills to the students to develop their career.</li>
+                <li>Providing consultancy and other services related to the computer engineering works.</li>
+                <li>Conducting public service, teacher service and various specialized classes.</li>
+                <li> Computer and IT doing related activities.</li>
+            </ol>
+        </ul>
+        <!-- <ul>, <ol> and <li> replaces theses methods of lining the information. -->
+        <!-- <h2><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#42;Objective of BFPS:</strong></h2>
+        <span>&nbsp;&nbsp;&nbsp;1. To focus on career along with studies, teach and guide students in the right way to succeed in life.</span>
+       <br><span><span>&nbsp;&nbsp;&nbsp;2. To provide complete study planning skills to the students to develop their career.</span>
+       <br><span><span>&nbsp;&nbsp;&nbsp;3. Providing consultancy and other services related to the computer engineering works.</span>
+       <br><span><span>&nbsp;&nbsp;&nbsp;4. Conducting public service, teacher service and various specialized classes. </span>
+       <br><span><span>&nbsp;&nbsp;&nbsp;5. Computer and IT doing related activities</span> -->
+    </div><br>
+    <div>
+        <!-- <h3><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#42;Program and services offered at BFPS:</strong></h3> -->    
+       
+     <h3><strong>&nbsp;&nbsp;&ast; Programs and services offered at BFPS:</strong></h3>
+        
+    
+        <ol type="disc">
+            <li>Computer Courses</li>
+            <ol type="i">
+                <li>Basic Course (MS Office Word, MS Excel, PowerPoint, Fundamental, Email & Internet)</li>
+                <li>Diploma & Designing Package (Photoshop, Pagemaker, Corel Draw)</li>
+                <li>Accounting Package (Tally, Busy, VAT, Tax, TDS, Swostik)</li>
+                <li>Engineering AutoCAD</li>
+                <li>Computer Hardware & Reparing</li>
+            </ol>
+            <li>CTEVT Short-Term Programs</li>
+            <ol type="i">
+                <li>Computer Hardware Technician (390hrs)</li>
+                <li>Assistant Plumber (390hrs)</li>
+                <li>Junior Building Electrician (390hrs)</li>
+                <li>Nursing Care Giver</li>
+            </ol>
+            <li>Japnese Language</li>
+            <ol type="i">
+                <li>Student Visa</li>
+                <li>SSW Working Visa</li>
+                <li>Engineering Visa (Bachelor Pass Direct Working Visa)</li>
+                <li>TITP-Training Visa :- N5, N4 & Skills Online & Physical Classes</li>
+            </ol>
+            <li>Online Form Services</li>
+            <ol type="i">
+                <li>Loksewa Aayog, Teacher Service Commission Online Form</li>
+                <li>E-Passport Online Form</li>
+                <li>Police Report Online Form</li>
+                <li>National ID Card Online Form</li>
+                <li>Covid-19 QR Code Online Form</li>
+                <li>Any Bank & Financial Sector Online Form</li>
+                <li>Driving Licence, PAN, Online Form</li>
+                <li>CTEVT, NEB and Any Institutions Online Form</li>
+            </ol>
+        </ul>
+    </div>
+    <div>
+        <img src="whychoose.jpg" alt="Bright Future">
+        <br><h3><strong>Why Choose BFPS:</strong></h3>
+        <p>We provide a variety of practical skill development training, study abroad opportunities <br> and a full range of online form servvices for students of all age groups. <br> Learners until they reach their full potential in the right place for them and improve their skills. <br> We follow up every student after admission and throughout their studies.</p>
+        <ul type="disc">
+            <li>As proper counseling will be provided for personality development guidance.</li>
+            <li>Since classes will be conducted on the concept of one student and one instructor.</li>
+            <li>Having well equipped computer lab, classrooms, books and other daily essential equipment facilities.</li>
+            <li>Because of the transportation facility.</li>
+            <li>Since job oriented classes will be conducted.</li>
+        </ul>
+
+
+    </div>
+   
+
     <body>
         <div class="container-fluid">
             <div class="row">
@@ -198,6 +315,7 @@ console.log("Current Time: " + currentTime);
                 </div>
             </div>
         </div>
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
         <!-- Search Results -->
         <div id="searchResults">
@@ -206,28 +324,40 @@ console.log("Current Time: " + currentTime);
         </div>
         <script src="bootstrap-5.3.1-dist/js/jquery-3.7.1.js"></script>
         <script src="bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script><!-- js--> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script><!-- js-->
         <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- chat bot-->
-        <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js" chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
+        <script async src="https://chatbot-dist.s3.us-east-2.amazonaws.com/chatbot/v2_build_chatbot.js"
+            chatbotId="3daee830-c986-462b-9065-1592ca9db61c"></script>
         <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8373766139557!2d82.48351420621461!3d28.029445854967687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399795e66723ae95%3A0xc4d44483519e171f!2zQnJpZ2h0IEZ1dHVyZSBQcmFiaWRoaWsgU2hpa3NoYWxheWEg4KSs4KWN4KSw4KS-4KSH4KSfIOCkq-CljeCkr-ClgeCkmuCksCDgpKrgpY3gpLDgpL7gpKzgpL_gpKfgpL_gpJUg4KS24KS_4KSV4KWN4KS34KS-4KSy4KSv!5e0!3m2!1sen!2snp!4v1695752443543!5m2!1sen!2snp" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-            <footer>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3521.8373766139557!2d82.48351420621461!3d28.029445854967687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399795e66723ae95%3A0xc4d44483519e171f!2zQnJpZ2h0IEZ1dHVyZSBQcmFiaWRoaWsgU2hpa3NoYWxheWEg4KSs4KWN4KSw4KS-4KSH4KSfIOCkq-CljeCkr-ClgeCkmuCksCDgpKrgpY3gpLDgpL7gpKzgpL_gpKfgpL_gpJUg4KS24KS_4KSV4KWN4KS34KS-4KSy4KSv!5e0!3m2!1sen!2snp!4v1695752443543!5m2!1sen!2snp"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+               <a href="footer_bfps/footer.html"></a>
+               <a href="footer_bfps/footer.css"></a>
+               <object type="text/html" data="footer_bfps/footer.html" width="100%" height="600px"></object>
+
+            <!-- <footer>
                 <div class="footer-content">
                     <nav> <b>contacts</b></nav>
                     <div class="socialIcons">
-                <a href="https://www.facebook.com/profile.php?id=100079189781645"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCCfaLuXvJQFIJsUwhOE8M0g%3Ffbclid%3DIwAR2PLlk4YqPVnXwL9tNyiyIbhe_DE-CWwBxmSqqkwPPmBtqk4I-p5ow2VrQ&h=AT3UZcaMjPYkKhQsSvCLXyiXrMCHXzDIqYFXf7m2-nZeAlvkUeUe3F1Irovun7ogDJf0_nzL3lwW2r5klGCUUYNZtJjFapb5BKK3A9SZRRDtB56XsI-DngIGsKYdCW_kesYNen19lRU4MTnPfHhCqA"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="instagram.com"></i></a>    
-            </div>
-        </div>
-     <div class="footer-bottom">
-         <p> copyright &copy;2023kamal.designed by <span class="designer">kamal</span> </p>
+                        <a href="https://www.facebook.com/profile.php?id=100079189781645"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a
+                            href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutube.com%2Fchannel%2FUCCfaLuXvJQFIJsUwhOE8M0g%3Ffbclid%3DIwAR2PLlk4YqPVnXwL9tNyiyIbhe_DE-CWwBxmSqqkwPPmBtqk4I-p5ow2VrQ&h=AT3UZcaMjPYkKhQsSvCLXyiXrMCHXzDIqYFXf7m2-nZeAlvkUeUe3F1Irovun7ogDJf0_nzL3lwW2r5klGCUUYNZtJjFapb5BKK3A9SZRRDtB56XsI-DngIGsKYdCW_kesYNen19lRU4MTnPfHhCqA"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="instagram.com"></i></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p> copyright &copy;2023kamal.designed by <span class="designer">kamal</span> </p>
 
-     </div>
-    </footer>
-</body>
+                </div>
+            </footer> -->
+    </body>
+
 </html>
