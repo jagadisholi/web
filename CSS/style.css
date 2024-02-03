@@ -1,94 +1,189 @@
 .container-fluid {
-    background-color: #71a37c;
-    padding: 40px;
-    text-align: unset;
-    font-size: x-large;
-    color: black;
-  }
-  .container {
-    display: flex;
-  }
-  
-  .logo {
-    margin-right: 10px;
-    width: 75px; /* Adjust the width and height as needed */
-    height: 75px; /* Adjust the width and height as needed */
-    border-radius: 50%; /* Creates a circular shape */
-    overflow: hidden; /* Ensures the image stays within the circular container */
-  }
-  
-  .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-.container{
+  background-color: #80d3f4;
+  padding: 40px;
+  text-align: unset;
+  font-size: x-large;
+  color: black;
+}
+
+.container {
   display: flex;
 }
-.flag{
+
+/* admission form styles */
+#admn {
+  float: right;
+
+
+
+}
+
+admn:hover {
+  color: #f900a2;
+  background-color: #e0aaff;
+}
+
+
+
+
+}
+
+button {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+button::before {
+  left: -10px;
+  background: #240046;
+}
+
+button::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 58%;
+}
+
+button:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+button span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+
+
+.logo {
+  margin-right: 10px;
+  width: 75px;
+  /* Adjust the width and height as needed */
+  height: 75px;
+  /* Adjust the width and height as needed */
+  border-radius: 50%;
+  /* Creates a circular shape */
+  overflow: hidden;
+  /* Ensures the image stays within the circular container */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+}
+
+.flag {
   margin-left: 100%;
   width: 20%;
   height: 15%;
 }
+
 /*make the flag in the center */
 .flag img {
   width: 100%;
   height: 100;
-  object-fit: fill; 
+  object-fit: fill;
   margin-right: 10%;
   margin-right: 20px;
 }
+
 /* CSS for search button*/
 /* Style for the search container */
 #searchContainer {
-  display: flex; /* Use flexbox for horizontal alignment */
-  align-items: center; /* Vertically center the items */
+  display: flex;
+  /* Use flexbox for horizontal alignment */
+  align-items: center;
+  /* Vertically center the items */
   position: fixed;
   top: 20px;
-  right:  10px;
+  right: 10px;
 }
 
-/* Style for the search box */
+/* Style for the search box
 #searchBox {
-  flex: 1; /* Grow to fill available space */
-  padding: 1% 1%; /* Add some padding */
-  border: 1px solid #ccc; /* Add a border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px;
+  flex: 1;
+  /* Grow to fill available space */
+  /* padding: 1% 1%; */
+  /* Add some padding */
+  /* border: 1px solid #ccc; */
+  /* Add a border */
+  /* border-radius: 5px; */
+  /* Rounded corners */
+  /* font-size: 16px;
   position: fixed;
   top: 20px;
   right: 40px;
-}
+} */ 
 
 /* Style for the search button */
 #searchButton {
-  background-color: #007BFF; /* Blue background color */
-  color: #fff; /* White text color */
+  background-color: #007BFF;
+  /* Blue background color */
+  color: #fff;
+  /* White text color */
   border: none;
-  padding: 0.5% 0.50%; /* Add some padding to the button */
-  border-radius: 5px; /* Rounded corners */
+  padding: 0.5% 0.50%;
+  /* Add some padding to the button */
+  border-radius: 5px;
+  /* Rounded corners */
   font-size: 16px;
   cursor: pointer;
   cursor: default;
-  margin-left: 10px; /* Add some space between the search box and button */
+  margin-left: 10px;
+  /* Add some space between the search box and button */
   position: fixed;
   top: 25px;
   right: 0.1px;
 }
+
 /* this is the css for dropdown button */
 .btn-group:hover .dropdown-menu {
   display: block;
 }
- /* Style for the dropdown button */
- .btn-primary.dropdown-toggle {
+
+/* Style for the dropdown button */
+.btn-primary.dropdown-toggle {
   background-color: #007BFF;
   color: #fff;
   border: none;
 }
+
 /* Style for the dropdown menu items */
 .dropdown-menu a {
   color: #333;
 }
+
 /* Hover effect for dropdown items */
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
@@ -98,94 +193,109 @@
 .dropdown-menu {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.btn-group:hover{
-  .custiom-spacing .btn:first-child{
+
+.btn-group:hover {
+  .custiom-spacing .btn:first-child {
     margin-right: 10px;
   }
 }
+
 /*page alighment for all*/
-.page-alignment{
+.page-alignment {
   max-width: 1300px;
   margin-inline: auto;
 }
-*{
+
+* {
   font-family: sans-serif;
 }
-h3{
+
+h3 {
   text-align: left;
 }
-img{
+
+img {
   display: block;
   width: 800px;
   margin: 0 auto;
   transition: 0.3s;
 }
+
 /* style for footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
- }
-body{
-    background: #fcfcfc;
-}
-footer{
-    background-color: #111;
-}
-.footer-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 10px;
-    text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-    .footer-content h3 {
-    color: white;
-    font-size: 2rem;
+body {
+  background: #fcfcfc;
+}
+
+footer {
+  background-color: #111;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: white;
+  font-size: 2rem;
 
 }
 
-     .footer-content p{
-    max-width: 100%;
-    color: white;
-    opacity: 0.7;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: 0.5s;
+.footer-content p {
+  max-width: 100%;
+  color: white;
+  opacity: 0.7;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.footer-content p:hover{
-    opacity: 1;
+
+.footer-content p:hover {
+  opacity: 1;
 }
+
 .footer-content .socialIcons a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.footer-content .socialIcons a i{
-    color: white;
-    margin: 10px;
-    font-size: 1.2rem;
-    border: 1px solid white;
-    padding: 7px;
-    border-radius:50%;
+.footer-content .socialIcons a i {
+  color: white;
+  margin: 10px;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  padding: 7px;
+  border-radius: 50%;
 
 }
-.footer-bottom{
-    background-color: black;
+
+.footer-bottom {
+  background-color: black;
 }
-.footer-bottom p{
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+
+.footer-bottom p {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
-.designer{
-    opacity: 0.7;
-    font-weight: 400;
-    text-transform: uppercase;
+
+.designer {
+  opacity: 0.7;
+  font-weight: 400;
+  text-transform: uppercase;
 }
+
 #scroll-text {
   opacity: 0;
   transition: opacity 0.5s;
@@ -200,20 +310,22 @@ footer{
 
 @keyframes typing {
   from {
-      width: 0;
+    width: 0;
   }
+
   to {
-      width: 100%;
+    width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
-      border-color: transparent;
+    border-color: transparent;
   }
+
   50% {
-      border-color: black;
+    border-color: black;
   }
 }
-
